@@ -7,7 +7,8 @@
 /* variaveis Modo Escuro */
 :root {
   --text-color: white;
-  --bg-url: url(assets/bg-mobile.jpg);
+  /* --bg-url: url(assets/bg-mobile.jpg); */
+  --bg-url: linear-gradient(135deg, #042326, #0A3A40, #0F5959);
   --stroke-color: rgba(255, 255, 255, 0.50);
   --surface-color: rgba(255, 255, 255, 0.10);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -18,7 +19,8 @@
 /* Variaveis Modo Claro */
 .light {
   --text-color: black;
-  --bg-url: url(assets/bg-mobile-light.jpg);
+  /* --bg-url: url(assets/bg-mobile-light.jpg); */
+  --bg-url: linear-gradient(135deg, #F2E7DC, #A9D9D0, #038C7F);
   --stroke-color: rgba(0, 0, 0, 0.50);
   --surface-color: rgba(0, 0, 0, 0.10);
   --surface-color-hover: rgba(0, 0, 0, 0.05);
@@ -28,8 +30,8 @@
 
 body {
   background-image: var(--bg-url);
-  background-repeat: no-repeat;
-  background-position: top center;
+  /* background-repeat: ;
+  background-position: top center; */
   background-size: cover;
 
   height: 100vh;
@@ -59,9 +61,26 @@ body * {
   width: 112px;
 }
 
-#profile p {
+#profile a {
+  display: block;
+  text-decoration: none;
+  width: fit-content;
+
   font-weight: 500;
-  margin: 8px;
+  margin: 8px auto;
+  
+  transition: all 0.5s;
+}
+
+#profile a:hover {
+  background-image: linear-gradient(to left, #8a3ab9, #4c68d7, #cd486b);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  color: var(--text-color);
 }
 
 /* Switch */
@@ -183,7 +202,7 @@ footer {
 
 /* Media Querie (Responsividade do plano de fundo) */
 
-@media (min-width: 700px) {
+/* @media (min-width: 700px) {
   :root {
     --bg-url: url(assets/bg-desktop.jpg);
   }
@@ -191,7 +210,7 @@ footer {
   .light {
     --bg-url: url(assets/bg-desktop-light.jpg);
   }
-}
+} */
 
 /* Animação da página */
 
